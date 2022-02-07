@@ -192,10 +192,14 @@ const setMarker = (Map, List) => {
       }
     })
     markers.push(marker);
-    setMarkerEvent(Map, marker);
+    //setMarkerEvent(Map, marker);
   })
-  Map._mapOptions.markers = [...markers];
-  console.log(Map._mapOptions.markers);
+
+
+  
+  //Map._mapOptions.markers = [...markers]; 
+  return markers;
+  //만든 마커를 리턴하는 기능추가
 }
 
 //맵 초기화

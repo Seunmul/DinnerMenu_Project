@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import { setMap, resetMap, setMarker } from "./MapSetting.js"
-import { addPolygon, addPolygonEvent } from "./Polygon.js"
+import { setMap, resetMap } from "./MapSetting.js"
+import { addPolygon } from "./Polygon.js"
 import { restaurants } from "./Restaurants.js"
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
 
     addPolygon(Map,restaurants);
     
-    // setMarker(Map, restaurants)
     return () => { //컴포넌트가 초기화 직전에 콜백함수로 실행.
       console.log("\n--- useEffect_CALLBACK");
       resetMap(Map);
